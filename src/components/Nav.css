@@ -1,0 +1,26 @@
+nav {
+    border-bottom: 1.4px solid var(--off-white);
+
+    height: 90px;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    background-color: var(--off-black);
+}
+
+nav svg {
+    width: 200px;
+}
+
+nav p {
+    font-family: monospace;
+    font-size: 20px;
+}

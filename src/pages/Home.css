@@ -1,0 +1,45 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 200px;
+}
+
+.welcome h1 {
+    font-size: clamp(3.125rem, 2.589rem + 2.679vw, 5rem);
+}
+
+.welcome button {
+    list-style: none;
+    text-decoration: none;
+    background-color: var(--off-white);
+
+    padding: 20px 50px;
+    border: none;
+    border-radius: 50px;
+
+    font-size: clamp(1rem, 2.589rem + 2.679vw, 1.5rem);
+    font-weight: bold;
+    color: var(--off-black);
+}
+
+.welcome button:hover {
+    background-color: var(--spotify-green);
+    cursor: pointer;
+}
+
+.welcome .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@media only screen and (max-width:43.75em) {
+    .welcome {
+        flex-direction: column;
+    }
+}
