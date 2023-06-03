@@ -5,7 +5,7 @@ export const getAccessToken = async (clientId, code) => {
     params.append("client_id", clientId);
     params.append("grant_type", "authorization_code");
     params.append("code", code);
-    params.append("redirect_uri", "http://localhost:5173/tracks");
+    params.append("redirect_uri", "https://effervescent-sorbet-abc583.netlify.app/tracks");
     params.append("code_verifier", verifier);
 
     const result = await fetch("https://accounts.spotify.com/api/token", {
