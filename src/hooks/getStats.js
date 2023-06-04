@@ -1,7 +1,7 @@
 import { getAccessToken } from './getAccessToken';
 import { getTopTracks } from './getTopTracks';
 
-const clientId = "5e8feaa52cf04f7b82825059cd4d79e7";
+const clientId = import.meta.env.VITE_APP_CLIENT_ID;
 
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");

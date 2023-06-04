@@ -1,11 +1,12 @@
 export const getAccessToken = async (clientId, code) => {
     const verifier = localStorage.getItem("verifier");
+    const redirect_uri = import.meta.env.VITE_APP_REDIRECT_URI;
 
     const params = new URLSearchParams();
     params.append("client_id", clientId);
     params.append("grant_type", "authorization_code");
     params.append("code", code);
-    params.append("redirect_uri", "https://effervescent-sorbet-abc583.netlify.app/tracks");
+    params.append("redirect_uri", redirect_uri);
     params.append("code_verifier", verifier);
 
     const result = await fetch("https://accounts.spotify.com/api/token", {

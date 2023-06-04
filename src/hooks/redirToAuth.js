@@ -1,13 +1,14 @@
 export const redirectToAuthCodeFlow = async (clientId) => {
     const verifier = generateCodeVerifier(128);
     const challenge = await generateCodeChallenge(verifier);
+    const redirect_uri = import.meta.env.VITE_APP_REDIRECT_URI;
 
     localStorage.setItem("verifier", verifier);
 
     const params = new URLSearchParams();
     params.append("client_id", clientId);
     params.append("response_type", "code");
-    params.append("redirect_uri", "https://effervescent-sorbet-abc583.netlify.app/tracks");
+    params.append("redirect_uri", redirect_uri);
     params.append("scope", "user-read-private user-read-email user-top-read");
     params.append("code_challenge_method", "S256");
     params.append("code_challenge", challenge);
