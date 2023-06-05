@@ -1,6 +1,7 @@
 export const getAccessToken = async (clientId, code) => {
     const verifier = localStorage.getItem("verifier");
     const redirect_uri = import.meta.env.VITE_APP_REDIRECT_URI;
+    console.log(redirect_uri)
 
     const params = new URLSearchParams();
     params.append("client_id", clientId);
