@@ -1,6 +1,5 @@
 import './Home.css';
 import { auth } from '../hooks/auth';
-import { Link } from 'react-router-dom';
 
 export const Home = () => {
     return (
@@ -10,7 +9,6 @@ export const Home = () => {
                 <div className="about">
                     <p>This is a demo project to test the spotify API :)</p>
                     <button onClick={auth}>Login</button>
-                    <Link to="/tracks">test</Link>
                 </div>
             </div>
 
