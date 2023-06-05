@@ -1,6 +1,6 @@
 import './Home.css';
 // import { auth } from '../hooks/auth';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
     return (
